@@ -27,7 +27,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition-colors"
                 >
-                  ดูตัวอย่างผลงานทั้งหมด
+                  ดูตัวอย่างผลงานบางส่วน
                   <ExternalLink size={20} />
                 </a>
               </div>

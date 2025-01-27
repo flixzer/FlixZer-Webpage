@@ -7,7 +7,6 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
-import Queue from './pages/Queue';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/queue" element={<Queue />} />
             </Routes>
           </AnimatePresence>
         </main>

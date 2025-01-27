@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
+import flixzerLogo from '../assets/FlixZer_head.png';
 
 const links = [
   { to: '/', icon: Home, label: 'Home' },
@@ -10,7 +11,6 @@ const links = [
   { to: '/portfolio', icon: Film, label: 'Portfolio' },
   { to: '/pricing', icon: DollarSign, label: 'Pricing' },
   { to: '/contact', icon: Mail, label: 'Contact' },
-  { to: '/queue', icon: Mail, label: 'Queue' },
 ];
 
 export default function Navbar() {
@@ -21,7 +21,20 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-sky-600 dark:text-sky-400">
+          <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-sky-600 dark:text-sky-400">
+            <motion.img 
+              src={flixzerLogo} 
+              alt="FlixZer Logo" 
+              className="w-8 h-8 object-contain"
+              animate={{
+                rotate: 360
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
             ก้อง
           </Link>
 

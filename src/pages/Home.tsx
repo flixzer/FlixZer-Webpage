@@ -1,9 +1,38 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Camera } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
+import flixzerLogo from '../assets/FlixZer_head.png';
+import { useState, useEffect } from 'react';
+
+// เพิ่ม array ของคำที่จะสลับ
+const nicknames = [
+  'Soraaut',
+  'FlixZer',
+  'Soraaut Plueamtanom',
+  'Gong',
+  'Gamer?',
+  'Editor',
+  'Noob Graphic',
+  'ก็ชื่อก้อง'
+];
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsDeleting(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % nicknames.length);
+        setIsDeleting(false);
+      }, 1000); // รอให้ลบข้อความเสร็จก่อนเปลี่ยนคำใหม่
+    }, 5000); // เปลี่ยนทุก 5 วินาที
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <PageTransition>
       <div className="min-h-screen flex items-center justify-center">
@@ -19,11 +48,43 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
+              <motion.img
+                src={flixzerLogo}
+                alt="FlixZer Logo"
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 object-contain"
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: "spring", duration: 1.5, delay: 0.3 }}
+              />
               <h1 className="text-4xl md:text-6xl font-bold text-sky-950 dark:text-sky-100 mb-6">
-                ก้อง (Soraaut)
+                ก้อง ({' '}
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ 
+                      opacity: 1, 
+                      y: 0,
+                      transition: { duration: 0.3 }
+                    }}
+                    exit={isDeleting ? {
+                      opacity: 0,
+                      y: -20,
+                      transition: { duration: 0.3 }
+                    } : {}}
+                    className="inline-block text-sky-600 dark:text-sky-400"
+                  >
+                    {nicknames[currentIndex]}
+                  </motion.span>
+                </AnimatePresence>
+                {' '})
               </h1>
               <div className="flex items-center justify-center gap-2 text-sky-700 dark:text-sky-300 mb-6">
-                <Camera size={24} />
+                <img 
+                  src={flixzerLogo} 
+                  alt="FlixZer Icon" 
+                  className="w-6 h-6 object-contain"
+                />
                 <h2 className="text-xl md:text-2xl">Video Editor | Motion Graphics</h2>
               </div>
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">

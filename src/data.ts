@@ -1,4 +1,4 @@
-import { Project, Service, QueueItem } from './types';
+import { Project, Service } from './types';
 
 export const projects: Project[] = [
   {
@@ -36,28 +36,4 @@ export const services: Service[] = [
     basePrice: 300,
     pricePerMinute: 50,
   },
-];
-
-export const queueItems: QueueItem[] = [
-  {
-    id: '1',
-    clientName: 'PangboyCH',
-    projectType: 'longform',
-    description: 'Highlight Stream งาน Charity',
-    status: 'in_progress',
-    progress: 60,
-    dueDate: '2024-03-20',
-    priority: 1
-  },
-  {
-    id: '2',
-    clientName: 'AONA',
-    projectType: 'shortform',
-    description: 'Shorts รีวิวร้านอาหาร EP.5',
-    status: 'pending',
-    progress: 0,
-    dueDate: '2024-03-25',
-    priority: 2
-  },
-  // เพิ่มข้อมูลตัวอย่างตามต้องการ
 ];
