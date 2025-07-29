@@ -117,7 +117,7 @@ export default function Portfolio() {
         }
         
         // Handle short format like /@username/video/7123456789
-        const userVideoMatch = urlObj.pathname.match(/\/@[^\/]+\/video\/(\d+)/);
+        const userVideoMatch = urlObj.pathname.match(/\/@[^/]+\/video\/(\d+)/);
         if (userVideoMatch) {
           return userVideoMatch[1];
         }
@@ -995,7 +995,7 @@ export default function Portfolio() {
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
                         <span className="text-gray-700 dark:text-gray-300">
-                          Highligh Reel และ Game Footage ต่าง ๆ
+                          Highlight Reel และ Game Footage ต่าง ๆ
                         </span>
                       </div>
                     </div>

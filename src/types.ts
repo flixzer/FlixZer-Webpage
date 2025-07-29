@@ -6,14 +6,22 @@ export type Project = {
   channelUrl?: string; // เพิ่ม field สำหรับ YouTube channel URL
 };
 
-export type Service = {
-  type: 'longform' | 'shortform' | 'monthly';
-  basePrice: number;
-  pricePerMinute?: number;
-  note?: string;
-  features?: string[];
-  contactRequired?: boolean;
-};
+export type Service =
+  | {
+      type: 'longform' | 'shortform';
+      basePrice: number;
+      pricePerMinute: number;
+      note?: string;
+      features?: string[];
+      contactRequired?: boolean;
+    }
+  | {
+      type: 'monthly';
+      basePrice: number;
+      note?: string;
+      features?: string[];
+      contactRequired?: boolean;
+    };
 
 export type QueueStatus = 'pending' | 'in_progress' | 'reviewing' | 'completed';
 

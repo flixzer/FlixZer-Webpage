@@ -13,7 +13,7 @@ export default function Pricing() {
   const [calculatedPrice, setCalculatedPrice] = useState<number>(0);
 
   const calculatePrice = () => {
-    if (!selectedService || !selectedService.pricePerMinute) return;
+    if (!selectedService || !('pricePerMinute' in selectedService) || !selectedService.pricePerMinute) return;
     
     const basePrice = selectedService.basePrice;
     let additionalMinutes = 0;
@@ -485,7 +485,7 @@ export default function Pricing() {
                               เพิ่ม {videoLength - (selectedService.type === 'longform' ? 5 : 1)} นาที:
                             </span>
                             <span>
-                              ฿{((videoLength - (selectedService.type === 'longform' ? 5 : 1)) * (selectedService.pricePerMinute || 0)).toLocaleString()}
+                              ฿{((videoLength - (selectedService.type === 'longform' ? 5 : 1)) * (('pricePerMinute' in selectedService ? selectedService.pricePerMinute : 0) || 0)).toLocaleString()}
                             </span>
                           </div>
                         )}
