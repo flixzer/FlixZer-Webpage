@@ -1370,57 +1370,32 @@ export default function Portfolio() {
                     </p>
                   </div>
                 </motion.div>
-
-                {/* Stats for Shortform */}
+  
+                {/* Stats Section */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 5.2 }}
-                  className="mt-12 text-center"
+                  transition={{ delay: 2.0 }}
+                  className="mt-20 bg-gradient-to-r from-sky-500 to-indigo-600 rounded-3xl p-8 text-white text-center"
                 >
-                  <div className="inline-flex items-center gap-8 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 px-8 py-6 rounded-2xl border border-orange-100 dark:border-orange-800">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">50+</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">Short Videos</div>
+                  <h3 className="text-2xl font-bold mb-8">สถิติการทำงาน</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="space-y-2">
+                      <div className="text-3xl font-bold">4+</div>
+                      <div className="text-sky-100">โปรเจกต์ที่ทำงานอยู่</div>
                     </div>
-                    <div className="w-px h-8 bg-orange-200 dark:bg-orange-700"></div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-red-600 dark:text-red-400">2M+</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">Total Views</div>
+                    <div className="space-y-2">
+                      <div className="text-3xl font-bold">4+</div>
+                      <div className="text-sky-100">ปีประสบการณ์</div>
                     </div>
-                    <div className="w-px h-8 bg-red-200 dark:bg-red-700"></div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">85%</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">Engagement Rate</div>
+                    <div className="space-y-2">
+                      <div className="text-3xl font-bold">100+</div>
+                      <div className="text-sky-100">วิดีโอที่ตัดต่อ</div>
                     </div>
                   </div>
                 </motion.div>
               </div>
             </motion.div>
-          </motion.div>
-
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.0 }}
-            className="mt-20 bg-gradient-to-r from-sky-500 to-indigo-600 rounded-3xl p-8 text-white text-center"
-          >
-            <h3 className="text-2xl font-bold mb-8">สถิติการทำงาน</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="space-y-2">
-                <div className="text-3xl font-bold">4+</div>
-                <div className="text-sky-100">โปรเจกต์ที่ทำงานอยู่</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold">3+</div>
-                <div className="text-sky-100">ปีประสบการณ์</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold">100+</div>
-                <div className="text-sky-100">วิดีโอที่ตัดต่อ</div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
