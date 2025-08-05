@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Play, Users, Calendar, Briefcase } from 'lucide-react';
+import { ExternalLink, Play, Users, Calendar, Briefcase, Download, Eye } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import PageTransition from '../components/PageTransition';
 import { projects } from '../data';
 import portfolioImg from '../assets/portfolio.png';
+import resumePdf from '../assets/Soraaut\'s Resume.pdf';
+import resumePreview from '../assets/Soraaut\'s Resume_page-0001.jpg';
 
 // Interface สำหรับข้อมูลวิดีโอ
 interface VideoData {
@@ -832,6 +834,110 @@ export default function Portfolio() {
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+
+          {/* Resume Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+            className="mb-16"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                ประวัติส่วนตัว
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                ดาวน์โหลดหรือดู Resume ของผม
+              </p>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.4 }}
+                className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-500"
+              >
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Resume Preview */}
+                  <div className="flex-shrink-0">
+                    <div className="relative group">
+                      {/* Resume Image Preview */}
+                      <div className="w-32 h-40 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 shadow-lg overflow-hidden bg-white dark:bg-gray-800">
+                        <img
+                          src={resumePreview}
+                          alt="Resume Preview"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        />
+                        
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                          <Eye className="text-white opacity-0 group-hover:opacity-100 transition-all duration-300" size={24} />
+                        </div>
+                      </div>
+                      
+                      {/* Floating Badge */}
+                      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
+                        JPG
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Resume Info */}
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
+                      Soraaut's Resume
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6">
+                      ประวัติการศึกษา ประสบการณ์การทำงาน และทักษะต่างๆ ที่ผมมี
+                    </p>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                      {/* Preview Button */}
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => window.open(resumePdf, '_blank')}
+                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300"
+                      >
+                        <Eye size={20} />
+                        ดู Preview
+                      </motion.button>
+
+                      {/* Download Button */}
+                      <motion.a
+                        href={resumePdf}
+                        download="Soraaut_Resume.pdf"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300"
+                      >
+                        <Download size={20} />
+                        ดาวน์โหลด
+                      </motion.a>
+                    </div>
+
+                    {/* Resume Stats */}
+                    <div className="flex justify-center md:justify-start gap-8 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
+                      <div className="text-center">
+                        <div className="text-lg font-bold text-indigo-600 dark:text-indigo-400">4+</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">ปีประสบการณ์</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-lg font-bold text-purple-600 dark:text-purple-400">3</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">โปรเจกต์หลัก</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">4</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Software</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* Current Projects */}
