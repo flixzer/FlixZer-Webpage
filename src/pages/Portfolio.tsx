@@ -556,7 +556,7 @@ export default function Portfolio() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen pt-32 md:pt-40 pb-16 bg-gradient-to-br from-sky-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900">
+      <div className="min-h-screen pt-32 md:pt-40 pb-16 bg-gradient-to-br from-sky-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
           {/* Hero Section */}
           <motion.div
@@ -583,7 +583,7 @@ export default function Portfolio() {
                   <img
                     src={portfolioImg}
                     alt="Portfolio Preview"
-                    className="relative w-full max-w-md mx-auto lg:max-w-full h-80 md:h-96 lg:h-[400px] rounded-3xl object-cover shadow-2xl border-4 border-white dark:border-gray-700"
+                    className="relative w-full max-w-md mx-auto lg:max-w-full h-80 md:h-96 lg:h-[400px] rounded-3xl object-cover shadow-2xl border-4 border-white dark:border-gray-700 transition-colors duration-300"
                   />
                   
                   {/* Overlay gradient */}
@@ -611,7 +611,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                  className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300"
                 >
                   สร้างสรรค์ผลงานด้วยความเชี่ยวชาญในการตัดต่อวิดีโอและการออกแบบกราฟิก
                 </motion.p>
@@ -625,15 +625,15 @@ export default function Portfolio() {
                 >
                   <div className="text-center lg:text-left">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">3+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">ปีประสบการณ์</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">ปีประสบการณ์</div>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">100+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">วิดีโอที่ตัดต่อ</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">วิดีโอที่ตัดต่อ</div>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">4+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">โปรเจกต์ปัจจุบัน</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">โปรเจกต์ปัจจุบัน</div>
                   </div>
                 </motion.div>
 
@@ -670,14 +670,14 @@ export default function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0 }}
+            transition={{ delay: 1.4 }}
             className="mb-20"
           >
             <div className="text-center mb-16">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
+                transition={{ delay: 1.6 }}
                 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent"
               >
                 Software Skills
@@ -685,8 +685,8 @@ export default function Portfolio() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 }}
-                className="text-gray-600 dark:text-gray-300 text-lg mb-8"
+                transition={{ delay: 1.8 }}
+                className="text-gray-600 dark:text-gray-300 text-lg mb-8 transition-colors duration-300"
               >
                 เครื่องมือมืออาชีพที่ใช้ในการสร้างสรรค์ผลงาน
               </motion.p>
@@ -701,7 +701,7 @@ export default function Portfolio() {
                       initial={{ opacity: 0, y: 30, scale: 0.9 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ 
-                        delay: 1.8 + index * 0.2,
+                        delay: 2.0 + index * 0.2,
                         duration: 0.8,
                         type: "spring",
                         stiffness: 100
@@ -715,8 +715,8 @@ export default function Portfolio() {
                         <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-5 transition-all duration-500 rounded-3xl`}></div>
                         
                         {/* Decorative Corner Elements */}
-                        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-gray-50 dark:from-gray-700 to-transparent rounded-bl-full opacity-50"></div>
-                        <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-gray-50 dark:from-gray-700 to-transparent rounded-tr-full opacity-30"></div>
+                        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-gray-50 dark:from-gray-700 to-transparent rounded-bl-full opacity-50 transition-colors duration-300"></div>
+                        <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-gray-50 dark:from-gray-700 to-transparent rounded-tr-full opacity-30 transition-colors duration-300"></div>
                         
                         {/* Content Layout */}
                         <div className="relative z-10 flex items-center gap-6">
@@ -728,7 +728,7 @@ export default function Portfolio() {
                             className="flex-shrink-0"
                           >
                             <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${skill.color} p-1 shadow-lg group-hover:shadow-xl transition-all duration-500`}>
-                              <div className="w-full h-full bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center">
+                              <div className="w-full h-full bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center transition-colors duration-300">
                                 <img 
                                   src={skill.icon} 
                                   alt={skill.name}
@@ -745,7 +745,7 @@ export default function Portfolio() {
                                 {skill.name}
                               </h3>
                               
-                              <p className="text-gray-500 dark:text-gray-400 font-medium">
+                              <p className="text-gray-500 dark:text-gray-400 font-medium transition-colors duration-300">
                                 {skill.category}
                               </p>
                             </div>
@@ -760,7 +760,7 @@ export default function Portfolio() {
                           <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 2.5 + index * 0.1 }}
+                            transition={{ delay: 2.8 + index * 0.1 }}
                             className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                           >
                             <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center shadow-lg`}>
@@ -776,7 +776,7 @@ export default function Portfolio() {
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 2.8 + index * 0.1 }}
+                        transition={{ delay: 3.0 + index * 0.1 }}
                         className="absolute -top-2 -right-2 z-20"
                       >
                         <div className={`w-6 h-6 bg-gradient-to-br ${skill.color} rounded-full shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`}></div>
@@ -789,12 +789,12 @@ export default function Portfolio() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 3.0 }}
+                  transition={{ delay: 3.2 }}
                   className="mt-12 text-center"
                 >
                   <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-full border border-emerald-100 dark:border-emerald-800">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+                    <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300 transition-colors duration-300">
                       เครื่องมือมืออาชีพสำหรับการสร้างสรรค์
                     </span>
                     <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
@@ -806,16 +806,16 @@ export default function Portfolio() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3.0 }}
+              transition={{ delay: 3.4 }}
               className="mt-16 max-w-4xl mx-auto"
             >
               <div className="rounded-2xl p-8 border transition-all duration-500 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 border-emerald-100 dark:border-emerald-800">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 transition-colors duration-300">
                       ความเชี่ยวชาญระดับมืออาชีพ
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                       เชี่ยวชาญในการใช้เครื่องมือมืออาชีพสำหรับการสร้างสรรค์เนื้อหาดิจิทัล 
                       ตั้งแต่การตัดต่อวิดีโอ Motion Graphics ไปจนถึงการออกแบบกราฟิก
                     </p>
@@ -824,11 +824,11 @@ export default function Portfolio() {
                   <div className="grid grid-cols-2 gap-6 text-center">
                     <div className="space-y-2">
                       <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">3+</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">ปีประสบการณ์</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">ปีประสบการณ์</div>
                     </div>
                     <div className="space-y-2">
                       <div className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">4</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">Software หลัก</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">Software หลัก</div>
                     </div>
                   </div>
                 </div>
@@ -840,14 +840,14 @@ export default function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 3.6 }}
             className="mb-16"
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 ประวัติส่วนตัว
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 ดาวน์โหลดหรือดู Resume ของผม
               </p>
             </div>
@@ -856,7 +856,7 @@ export default function Portfolio() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.4 }}
+                transition={{ delay: 3.8 }}
                 className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-500"
               >
                 <div className="flex flex-col md:flex-row items-center gap-8">
@@ -864,7 +864,7 @@ export default function Portfolio() {
                   <div className="flex-shrink-0">
                     <div className="relative group">
                       {/* Resume Image Preview */}
-                      <div className="w-32 h-40 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 shadow-lg overflow-hidden bg-white dark:bg-gray-800">
+                      <div className="w-32 h-40 rounded-xl border-2 border-indigo-200 dark:border-indigo-700 shadow-lg overflow-hidden bg-white dark:bg-gray-800 transition-colors duration-300">
                         <img
                           src={resumePreview}
                           alt="Resume Preview"
@@ -886,10 +886,10 @@ export default function Portfolio() {
 
                   {/* Resume Info */}
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2 transition-colors duration-300">
                       Soraaut's Resume
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
                       ประวัติการศึกษา ประสบการณ์การทำงาน และทักษะต่างๆ ที่ผมมี
                     </p>
 
@@ -920,18 +920,18 @@ export default function Portfolio() {
                     </div>
 
                     {/* Resume Stats */}
-                    <div className="flex justify-center md:justify-start gap-8 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
+                    <div className="flex justify-center md:justify-start gap-8 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600 transition-colors duration-300">
                       <div className="text-center">
                         <div className="text-lg font-bold text-indigo-600 dark:text-indigo-400">4+</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">ปีประสบการณ์</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400 transition-colors duration-300">ปีประสบการณ์</div>
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-purple-600 dark:text-purple-400">3</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">โปรเจกต์หลัก</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400 transition-colors duration-300">โปรเจกต์หลัก</div>
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">4</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">Software</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400 transition-colors duration-300">Software</div>
                       </div>
                     </div>
                   </div>
@@ -944,13 +944,13 @@ export default function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4 }}
+            transition={{ delay: 4.0 }}
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent">
                 โปรเจกต์ปัจจุบัน
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 ร่วมงานกับช่อง YouTuber ชั้นนำต่างๆ
               </p>
             </div>
@@ -961,7 +961,7 @@ export default function Portfolio() {
                   key={project.name}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.6 + index * 0.2 }}
+                  transition={{ delay: 4.2 + index * 0.2 }}
                   className="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
                 >
                   {/* Gradient Border Effect */}
@@ -1010,14 +1010,14 @@ export default function Portfolio() {
                         {project.name}
                       </h3>
                       
-                      <div className="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         <Calendar size={16} />
                         <span className="text-sm font-medium">{project.period}</span>
                       </div>
                       
                       <div className="flex items-center justify-center gap-2">
                         <Briefcase size={16} className="text-sky-500" />
-                        <span className="text-sky-600 dark:text-sky-400 font-medium">
+                        <span className="text-sky-600 dark:text-sky-400 font-medium transition-colors duration-300">
                           {project.role}
                         </span>
                       </div>
@@ -1039,14 +1039,14 @@ export default function Portfolio() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 4.8 }}
             className="mt-20"
           >
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent">
                 ตัวอย่างผลงาน
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Thumbnail และวิดีโอที่ได้รับความนิยม
               </p>
               {error && (
@@ -1060,7 +1060,7 @@ export default function Portfolio() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.0 }}
+              transition={{ delay: 5.0 }}
               className="mb-24"
             >
               <div className="max-w-7xl mx-auto">
@@ -1069,7 +1069,7 @@ export default function Portfolio() {
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 2.2 }}
+                    transition={{ delay: 5.2 }}
                     className="space-y-6"
                   >
                     <div className="inline-block">
@@ -1078,14 +1078,14 @@ export default function Portfolio() {
                       </span>
                     </div>
                     
-                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                       Gaming Highlight<br />
                       <span className="bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">
                         ที่โดดเด่น
                       </span>
                     </h3>
                     
-                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                       เชี่ยวชาญในการสร้าง Gaming Montage และ Highlight Reel 
                       ที่สร้างความตื่นเต้นให้กับผู้ชม พร้อมเอฟเฟ็กต์และการตัดต่อ
                       ที่ลื่นไหลตามจังหวะเพลง
@@ -1094,7 +1094,7 @@ export default function Portfolio() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-                        <span className="text-gray-700 dark:text-gray-300">
+                        <span className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                           Longform Content และ Shortform Content
                         </span>
                       </div>
@@ -1124,17 +1124,17 @@ export default function Portfolio() {
                   <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 2.4 }}
+                    transition={{ delay: 5.4 }}
                     className="grid grid-cols-2 gap-4"
                   >
                     {isLoading ? (
                       // Loading skeleton
                       Array.from({ length: 4 }).map((_, index) => (
-                        <div key={`loading-${index}`} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg animate-pulse">
-                          <div className="aspect-video bg-gray-300 dark:bg-gray-600"></div>
+                        <div key={`loading-${index}`} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg animate-pulse transition-colors duration-300">
+                          <div className="aspect-video bg-gray-300 dark:bg-gray-600 transition-colors duration-300"></div>
                           <div className="p-3">
-                            <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded mb-2"></div>
-                            <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-3/4"></div>
+                            <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded mb-2 transition-colors duration-300"></div>
+                            <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-3/4 transition-colors duration-300"></div>
                           </div>
                         </div>
                       ))
@@ -1147,7 +1147,7 @@ export default function Portfolio() {
                           rel="noopener noreferrer"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 2.6 + index * 0.1 }}
+                          transition={{ delay: 5.6 + index * 0.1 }}
                           className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 block"
                         >
                           <div className="relative aspect-video overflow-hidden">
@@ -1169,11 +1169,11 @@ export default function Portfolio() {
                           </div>
                           
                           <div className="p-3">
-                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 line-clamp-1 text-sm">
+                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 line-clamp-1 text-sm transition-colors duration-300">
                               {item.title}
                             </h4>
-                            <div className="flex justify-between items-center text-xs text-gray-600 dark:text-gray-400">
-                              <span className="font-medium text-sky-600 dark:text-sky-400">
+                            <div className="flex justify-between items-center text-xs text-gray-600 dark:text-gray-400 transition-colors duration-300">
+                              <span className="font-medium text-sky-600 dark:text-sky-400 transition-colors duration-300">
                                 {item.channelTitle}
                               </span>
                               <div className="flex items-center gap-1">
@@ -1194,7 +1194,7 @@ export default function Portfolio() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.8 }}
+              transition={{ delay: 6.0 }}
               className="mb-24"
             >
               <div className="max-w-7xl mx-auto">
@@ -1203,7 +1203,7 @@ export default function Portfolio() {
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 3.0 }}
+                    transition={{ delay: 6.2 }}
                     className="order-2 lg:order-1"
                   >
                     {/* Featured Large Thumbnail */}
@@ -1214,7 +1214,7 @@ export default function Portfolio() {
                         rel="noopener noreferrer"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 3.2 }}
+                        transition={{ delay: 6.4 }}
                         className="mb-4 group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 block"
                       >
                         <div className="relative aspect-video overflow-hidden">
@@ -1258,7 +1258,7 @@ export default function Portfolio() {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 3.4 + index * 0.1 }}
+                            transition={{ delay: 6.6 + index * 0.1 }}
                             className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 block"
                           >
                             <div className="relative aspect-video overflow-hidden">
@@ -1272,7 +1272,7 @@ export default function Portfolio() {
                               </div>
                             </div>
                             <div className="p-2">
-                              <h5 className="text-xs font-semibold text-gray-800 dark:text-gray-200 line-clamp-1">
+                              <h5 className="text-xs font-semibold text-gray-800 dark:text-gray-200 line-clamp-1 transition-colors duration-300">
                                 {item.title}
                               </h5>
                             </div>
@@ -1281,10 +1281,10 @@ export default function Portfolio() {
                       ) : (
                         // Loading placeholders
                         Array.from({ length: 2 }).map((_, index) => (
-                          <div key={`small-loading-${index}`} className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg animate-pulse">
-                            <div className="aspect-video bg-gray-300 dark:bg-gray-600"></div>
+                          <div key={`small-loading-${index}`} className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg animate-pulse transition-colors duration-300">
+                            <div className="aspect-video bg-gray-300 dark:bg-gray-600 transition-colors duration-300"></div>
                             <div className="p-2">
-                              <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded"></div>
+                              <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded transition-colors duration-300"></div>
                             </div>
                           </div>
                         ))
@@ -1296,7 +1296,7 @@ export default function Portfolio() {
                   <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 3.6 }}
+                    transition={{ delay: 6.8 }}
                     className="space-y-6 order-1 lg:order-2"
                   >
                     <div className="inline-block">
@@ -1305,14 +1305,14 @@ export default function Portfolio() {
                       </span>
                     </div>
                     
-                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                       Storytelling<br />
                       <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                         ที่สร้างสรรค์
                       </span>
                     </h3>
                     
-                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                       การสร้างเนื้อหาที่มีเรื่องราวและอารมณ์ ตั้งแต่ Vlog, Highlight ต่าง ๆ
                       รวมถึง LIVE Streaming ที่ถูกย่อออกมาให้เป็นคลิปที่สั้น กระชับ แต่ยังสามารถเก็บเรื่องราวได้อย่างน่าสนใจ
                     </p>
@@ -1320,19 +1320,19 @@ export default function Portfolio() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                        <span className="text-gray-700 dark:text-gray-300">
+                        <span className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                           Professional Color Grading
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                        <span className="text-gray-700 dark:text-gray-300">
+                        <span className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                           Audio Enhancement & Mixing
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
-                        <span className="text-gray-700 dark:text-gray-300">
+                        <span className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                           Creative Transitions
                         </span>
                       </div>
@@ -1359,7 +1359,7 @@ export default function Portfolio() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 4.0 }}
+              transition={{ delay: 7.2 }}
               className="mb-24"
             >
               <div className="max-w-7xl mx-auto">
@@ -1367,7 +1367,7 @@ export default function Portfolio() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 4.2 }}
+                  transition={{ delay: 7.4 }}
                   className="text-center mb-16"
                 >
                   <div className="inline-block mb-6">
@@ -1376,14 +1376,14 @@ export default function Portfolio() {
                     </span>
                   </div>
                   
-                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">
+                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6 transition-colors duration-300">
                     Shortform Videos<br />
                     <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                       ที่ดึงดูดใจ
                     </span>
                   </h3>
                   
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
                     วิดีโอสั้นที่ออกแบบมาเพื่อ Social Media รูปแบบ 9:16 เหมาะสำหรับ TikTok, Instagram Reels, YouTube Shorts
                     ที่สามารถดึงดูดความสนใจได้ในเวลาอันสั้น
                   </p>
@@ -1399,7 +1399,7 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       initial={{ opacity: 0, y: 30, scale: 0.9 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      transition={{ delay: 4.4 + index * 0.1 }}
+                      transition={{ delay: 7.6 + index * 0.1 }}
                       className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                     >
                       {/* 9:16 Aspect Ratio Container */}
@@ -1428,10 +1428,10 @@ export default function Portfolio() {
                       
                       {/* Video Info */}
                       <div className="p-3">
-                        <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm line-clamp-2 mb-1">
+                        <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm line-clamp-2 mb-1 transition-colors duration-300">
                           {video.title}
                         </h4>
-                        <p className="text-xs text-gray-600 dark:text-gray-400 truncate">
+                        <p className="text-xs text-gray-600 dark:text-gray-400 truncate transition-colors duration-300">
                           {video.channelTitle}
                         </p>
                       </div>
@@ -1443,15 +1443,15 @@ export default function Portfolio() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 5.0 }}
+                  transition={{ delay: 8.2 }}
                   className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
                 >
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <span className="text-white text-2xl">📱</span>
                     </div>
-                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2">Mobile Optimized</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2 transition-colors duration-300">Mobile Optimized</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       ออกแบบเฉพาะสำหรับการรับชมบนมือถือ อัตราส่วน 9:16
                     </p>
                   </div>
@@ -1460,8 +1460,8 @@ export default function Portfolio() {
                     <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <span className="text-white text-2xl">⚡</span>
                     </div>
-                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2">Quick Engagement</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2 transition-colors duration-300">Quick Engagement</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       เนื้อหาที่ดึงดูดความสนใจได้ในวินาทีแรก
                     </p>
                   </div>
@@ -1470,8 +1470,8 @@ export default function Portfolio() {
                     <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <span className="text-white text-2xl">🎯</span>
                     </div>
-                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2">Trend Following</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <h4 className="font-bold text-gray-800 dark:text-gray-200 mb-2 transition-colors duration-300">Trend Following</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
                       ทันเทรนด์และสไตล์ที่ได้รับความนิยมในแต่ละช่วงเวลา
                     </p>
                   </div>
@@ -1481,7 +1481,7 @@ export default function Portfolio() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2.0 }}
+                  transition={{ delay: 8.6 }}
                   className="mt-20 bg-gradient-to-r from-sky-500 to-indigo-600 rounded-3xl p-8 text-white text-center"
                 >
                   <h3 className="text-2xl font-bold mb-8">สถิติการทำงาน</h3>
